@@ -43,6 +43,13 @@ public class Runner {
 	@BeforeMethod
 	public void prepareTest() throws IOException, InterruptedException {
 		
+		System.out.println();
+		Map<String, String> env = System.getenv();
+		for (String envName : env.keySet()) {
+			System.out.format("%s=%s%n", envName, env.get(envName));
+		}
+		System.out.println();
+		
 		
 		String deviceJSON = System.getenv("pCloudy_Devices");
 		System.out.println("deviceJSON: " + deviceJSON);
@@ -71,12 +78,7 @@ public class Runner {
 		String pCloudy_DurationInMinutes = System.getenv("pCloudy_DurationInMinutes");
 		System.out.println("pCloudy_DurationInMinutes : " + pCloudy_DurationInMinutes);
 
-		System.out.println();
-		Map<String, String> env = System.getenv();
-		for (String envName : env.keySet()) {
-			System.out.format("%s=%s%n", envName, env.get(envName));
-		}
-		System.out.println();
+		
 
 		System.out.println("Start.................");
 		DesiredCapabilities capabilities = new DesiredCapabilities();
