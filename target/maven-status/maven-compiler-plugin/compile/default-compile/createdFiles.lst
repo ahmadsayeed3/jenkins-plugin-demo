@@ -1,0 +1,4 @@
+com\pCloudy\testNG\BG.class
+com\pCloudy\testNG\Runner.class
+com\pCloudy\testNG\LocalRun.class
+com\pCloudy\testNG\Env.class
