@@ -81,7 +81,7 @@ public class Runner {
 
 
 		System.out.println("Start.................");
-		System.out.println("Device name:-"+devices.get(0).toString());
+		System.out.println("Device name:-"+devices.get(0).getAsString());
 
 
 		DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -90,7 +90,7 @@ public class Runner {
 		capabilities.setCapability("pCloudy_DurationInMinutes", pCloudy_DurationInMinutes);
 		capabilities.setCapability("newCommandTimeout", 600);
 		capabilities.setCapability("launchTimeout", 90000);
-		capabilities.setCapability("pCloudy_DeviceFullName", devices.get(0).toString());
+		capabilities.setCapability("pCloudy_DeviceFullName", devices.get(0).getAsString());
 		capabilities.setCapability("platformVersion", "9.0.0");
 		capabilities.setCapability("platformName", "Android");
 		capabilities.setCapability("automationName", "uiautomator2");
